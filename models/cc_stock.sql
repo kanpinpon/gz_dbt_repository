@@ -20,7 +20,7 @@ WITH cc_sales_products AS (
     ,stock
     -- value
     ,price
-  FROM `raw_data_circle.raw_cc_stock` t
+  FROM {{ref('stg_cc_stock')}} t
 )
 
 
