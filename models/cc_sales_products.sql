@@ -1,8 +1,10 @@
-{{config(
-materialized = "table")}}
+{{
+  config(
+    materialized='table'
+  )
+}}
 
-
-  SELECT
+SELECT
   ### Key ###  
   product_id
   ###########
