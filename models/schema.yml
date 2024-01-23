@@ -1,31 +1,83 @@
+# version: 2
+
+# # models:
+# #   - name: cc_sales_products
+# #     columns:
+# #       ### PK ###
+# #       - name: product_id
+# #         tests:
+# #           - unique
+# #           - not_null
+# #       - name: qty_91
+# #         tests:
+# #           - not_null
+# #       - name: avg_daily_qty_91
+# #         tests:
+# #           - not_null
+    
+# #   - name: cc_stock
+# #     columns:
+# #       - name: product_id
+# #         tests:
+# #           - unique 
+# #       - name: product_name
+# #         tests:
+# #           - not_null
+
+# #       - name: model_type
+# #         tests:
+# #         - accepted_values:
+# #             values: ['Accessories', 'Crop-top','Legging' , 'Short', 'Top', 'T-shirt']
+        
+#   - name: sales
+#     tests:
+#       - unique:
+#         column_name: "(orders_id || '-' || products_id)"
+      
+              
+#     columns:
+#     - name: orders_id
+#       tests : 
+#       - not_null 
+
+#     - name: products_id
+#       tests:
+#         - not_null
+
+#     - name: qty
+
+#     - name: turnover
+#       tests:
+#         - not_null
+#     - name: purchase_cost
+#       tests:
+#         - not_null
+#     - name: margin
+
+
 version: 2
 
 models:
-  - name: cc_sales_products
-    columns:
-      ### PK ###
-      - name: product_id
-        tests:
-          - unique
-          - not_null
-      - name: qty_91
-        tests:
-          - not_null
-      - name: avg_daily_qty_91
-        tests:
-          - not_null
-    
-  - name: cc_stock
-    columns:
-      - name: product_id
-        tests:
-          - unique 
-      - name: product_name
-        tests:
-          - not_null
 
-      - name: model_type
-        tests:
-        - accepted_values:
-            values: ['Accessories', 'Crop-top','Legging' , 'Short', 'Top', 'T-shirt']
-          
+    - name: sales
+      tests:
+        - unique:
+            column_name: "(orders_id || '-' || products_id)"
+            
+      columns:
+          - name: orders_id
+            tests : 
+            - not_null 
+
+          - name: products_id
+            tests:
+              - not_null
+          - name: qty
+
+          - name: turnover
+            tests:
+              - not_null
+          - name: purchase_cost
+            tests:
+              - not_null
+          - name: margin
